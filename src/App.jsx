@@ -6,7 +6,7 @@ import Api from './api/Api'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
 import Home from './Page/Home'
-import Login from './Components/Login/Login'
+import Login from './Components/RotasLogin/login/Login'
 
 const App = () => {
           return (
@@ -19,7 +19,7 @@ const App = () => {
 
                                         </Routes>
                                         <Routes>
-                                                  <Route path='/login'
+                                                  <Route path='/login/*'
                                                             element={<Login />} />
 
                                         </Routes>
