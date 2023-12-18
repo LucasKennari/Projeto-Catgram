@@ -1,0 +1,12 @@
+.inputComp {
+  padding: 0.3rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  border-style: none;
+}
+.inputComp::placeholder {
+  font-family: var(--type-first);
+  color: #676767cc;
+}

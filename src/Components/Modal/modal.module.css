@@ -1,0 +1,54 @@
+.modalContainer {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: grid;
+  grid-column: auto;
+  align-items: center;
+  justify-items: center;
+  min-width: 300px;
+  background: #313131;
+  padding: 6rem;
+  border: 1px solid #dbdbdb61;
+  box-shadow: 0 0 40px 0.1px rgba(22, 22, 22, 0.347);
+  position: relative;
+  border-radius: 15px;
+}
+.fechar {
+  width: 25px;
+  height: 25px;
+  top: -10px;
+  right: -10px;
+  position: absolute;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.animeTop {
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: animeTop 0.4s forwards;
+}
+
+@keyframes animeTop {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+.ativoModal {
+  display: flex;
+}

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
-import LoginForm from '../LoginForm'
-import LoginCreate from '../LoginCreate'
-import LoginPasswordLost from '../LoginPasswordLost'
-import LoginResetPassword from '../LoginResetPassword'
+import LoginForm from '../loginForm/LoginForm'
+import LoginCreate from '../loginCreate/LoginCreate'
+import LoginPasswordLost from '../loginPass/LoginPasswordLost'
+import LoginResetPassword from '../loginPass/LoginResetPassword'
 
 const Login = () => {
           return (
