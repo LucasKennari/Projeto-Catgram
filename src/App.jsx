@@ -7,6 +7,7 @@ import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
 import Home from './Page/Home'
 import Login from './Components/RotasLogin/login/Login'
+import { UserStorage } from './useHooks/useContext'
 
 const App = () => {
           // return (
@@ -15,19 +16,21 @@ const App = () => {
           return (
                     <div>
                               <BrowserRouter>
-                                        <Header />
-                                        <Routes>
-                                                  <Route path='/'
-                                                            element={<Home />} />
+                                        <UserStorage>
+                                                  <Header />
+                                                  <Routes>
+                                                            <Route path='/'
+                                                                      element={<Home />} />
 
-                                        </Routes>
-                                        <Routes>
-                                                  <Route path='/login/*'
-                                                            element={<Login />} />
+                                                  </Routes>
+                                                  <Routes>
+                                                            <Route path='/login/*'
+                                                                      element={<Login />} />
 
-                                        </Routes>
-                                        <Footer />
+                                                  </Routes>
+                                                  <Footer />
 
+                                        </UserStorage>
                               </BrowserRouter>
                     </div>
           )

@@ -6,63 +6,52 @@ import styles from "./lgnFormComp.module.css"
 
 import InputForm from '../inputForm/InputForm'
 import BtnForm from '../btnForm/BtnForm'
+import { userContext } from '../../../useHooks/useContext'
 
-const url = "https://dogsapi.origamid.dev/json/jwt-auth/v1/token"
+
 
 const LoginFormComponents = () => {
-
-          const { loading, error, data, request } = useFetch()
-
+          const { userLogin, data } = React.useContext(userContext)
+          //   const { loading, error, request } = useFetch()
           const username = useForm()
           const password = useForm()
-
-
           async function handleSubmit(event) {
                     event.preventDefault()
 
-                    if (username.validate() && password.validade()) {
-                              const reponse = await request(url, {
-                                        method: "POST",
-                                        headers: {
-                                                  "Content-Type": "application/json",
-                                        },
-                                        body: JSON.stringify({ username, password })
+                    if (username.validate() && password.validate()) {
 
-                              })
-                              return console.log(reponse)
-
-                              //hook de fetch e useNavigate
+                              userLogin(username.value, password.value)
 
                     }
 
+
           }
 
-          if (!loading) return null
-          else
 
-                    return (
-                              <>
-                                        <div className={styles.iconLogin} >
-                                                  <img src="IMG\icons\lucas-03.png" alt="CAT-ICON" />
+          return (
+                    <>
 
-                                        </div>
-                                        <form onSubmit={handleSubmit} className={styles.lgnFormComp}>
+                              <div className={styles.iconLogin} >
+                                        <img src="IMG\icons\lucas-03.png" alt="CAT-ICON" />
 
+                              </div>
+                              <form onSubmit={handleSubmit} className={styles.lgnFormComp}>
 
 
-                                                  <InputForm
-                                                            label="Login" type="text" name="username" {...username} />
-                                                  <InputForm
-                                                            label="Password" type="password" name="password" {...password} />
 
-                                                  <BtnForm loading={loading}>LOGIN</BtnForm>
+                                        <InputForm
+                                                  label="Login" type="text" name="username" {...username} />
+                                        <InputForm
+                                                  label="Password" type="password" name="password" {...password} />
 
-
-                                        </form>
+                                        <BtnForm >LOGIN</BtnForm>
 
 
-                              </>
-                    )
+                              </form>
+
+
+                    </>
+          )
 }
 
 export default LoginFormComponents

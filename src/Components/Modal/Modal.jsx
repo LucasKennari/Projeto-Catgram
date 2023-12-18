@@ -15,7 +15,7 @@ const Modal = ({ children, lgnModal, setLgnModal }) => {
           return (<>
                     <section id='lgnModal' className={`
                     ${styles.modalContainer}  
-                    ${styles.animeTop} 
+                    ${styles.animeTop} ,
                
                    `}>
                               < div className={styles.modal} >

@@ -11,20 +11,24 @@ const useFetch = () => {
                     let json;
 
                     try {
-                              setLoading(true)
+                              //   setLoading(true)
                               response = await fetch(url, options)
                               json = await response.json()
+
                               return setData(json)
 
                     } catch (error) {
+                              json = null
                               setData(null)
                               return setError(error)
                     } finally {
-                              return loading(false)
+                              //return loading(false)
                     }
 
-                    // // return { response, json }
+
           }, [loading])
+
+
           return { loading, data, error, request }
 }
 
