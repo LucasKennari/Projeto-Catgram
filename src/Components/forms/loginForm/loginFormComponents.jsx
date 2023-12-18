@@ -1,5 +1,6 @@
 import React from 'react'
 import useFetch from '../../../useHooks/useFetch'
+import useForm from '../../../useHooks/useForm'
 
 import styles from "./lgnFormComp.module.css"
 
@@ -11,24 +12,29 @@ const url = "https://dogsapi.origamid.dev/json/jwt-auth/v1/token"
 const LoginFormComponents = () => {
 
           const { loading, error, data, request } = useFetch()
-          const [username, setUsername] = React.useState("")
-          const [password, setPassword] = React.useState("")
+
+          const username = useForm()
+          const password = useForm()
+
 
           async function handleSubmit(event) {
-
                     event.preventDefault()
 
-                    const reponse = await request(url, {
-                              method: "POST",
-                              headers: {
-                                        "Content-Type": "application/json",
-                              },
-                              body: JSON.stringify({ username, password })
+                    if (username.validate() && password.validade()) {
+                              const reponse = await request(url, {
+                                        method: "POST",
+                                        headers: {
+                                                  "Content-Type": "application/json",
+                                        },
+                                        body: JSON.stringify({ username, password })
 
-                    })
-                    return console.log(reponse)
+                              })
+                              return console.log(reponse)
 
-                    //hook de fetch e useNavigate
+                              //hook de fetch e useNavigate
+
+                    }
+
           }
 
           if (!loading) return null
@@ -45,9 +51,9 @@ const LoginFormComponents = () => {
 
 
                                                   <InputForm
-                                                            label="Login" type="text" name="username" />
+                                                            label="Login" type="text" name="username" {...username} />
                                                   <InputForm
-                                                            label="Password" type="password" name="password" />
+                                                            label="Password" type="password" name="password" {...password} />
 
                                                   <BtnForm loading={loading}>LOGIN</BtnForm>
 

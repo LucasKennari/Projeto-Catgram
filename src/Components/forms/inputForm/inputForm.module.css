@@ -1,18 +1,56 @@
+.wrapper {
+  margin-bottom: 1rem;
+}
+
 .inputComp {
-  padding: 0.3rem;
+  display: block;
+  width: 100%;
+
   margin-top: 1rem;
-  border-radius: 5px;
+  border-radius: 7px;
+
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1rem;
+
+  padding: 0.5rem;
   box-sizing: border-box;
   text-align: center;
-  border-style: none;
+
+  border: 1px solid #5e6fa3;
+  background: #5e6fa325;
+  color: bisque;
+
+  transition: 0.2s;
 }
 .inputComp::placeholder {
   font-family: monospace;
   color: #676767cc;
 }
-.inputComp:focus {
-  color: none;
-  box-shadow: none;
-  outline: 0;
+.inputComp:focus,
+.inputComp:hover {
+  outline: none;
+  border-color: #5e6fa3;
   border-style: none;
+  background-color: rgb(123, 123, 123);
+  box-shadow: rgba(255, 255, 255, 0.196) 0px 0px 15px 0px;
+}
+.inputComp::selection {
+  background-color: aliceblue;
+  color: rgb(39, 39, 39);
+}
+
+.lblInput {
+  display: grid;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  padding-top: 0.5rem;
+  color: #f0f8ff;
+}
+
+.error {
+  font-size: 0.875rem;
+  color: rgb(165, 200, 9);
+  margin-top: 0.25rem;
 }

@@ -3,10 +3,11 @@
 }
 .iconLogin {
   width: 80px;
-  padding: 0.2rem;
+  padding-bottom: 1.5rem;
   display: block;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 /* .btnLogin {
