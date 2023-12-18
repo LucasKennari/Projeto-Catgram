@@ -14,7 +14,7 @@ const useFetch = () => {
                               setLoading(true)
                               response = await fetch(url, options)
                               json = await response.json()
-                              setData(json)
+                              return setData(json)
 
                     } catch (error) {
                               setData(null)
@@ -23,7 +23,7 @@ const useFetch = () => {
                               return loading(false)
                     }
 
-                    // return { response, json }
+                    // // return { response, json }
           }, [loading])
           return { loading, data, error, request }
 }

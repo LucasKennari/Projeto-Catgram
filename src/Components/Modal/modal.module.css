@@ -17,24 +17,33 @@
   align-items: center;
   justify-items: center;
   min-width: 300px;
-  background: #313131;
+  background-color: #313131;
   padding: 6rem;
-  border: 1px solid #dbdbdb61;
+  border: 2px solid #5e6fa3;
   box-shadow: 0 0 40px 0.1px rgba(22, 22, 22, 0.347);
   position: relative;
   border-radius: 15px;
 }
 .fechar {
+  margin: 5px;
+  padding: 5px;
+  background: none;
   width: 25px;
   height: 25px;
-  top: -10px;
-  right: -10px;
+  top: 7px;
+  right: 5px;
   position: absolute;
   border-radius: 50%;
   border: none;
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(150, 150, 150);
+}
+.fechar:hover {
+  color: rgb(202, 201, 201);
 }
 
 .animeTop {
@@ -49,6 +58,6 @@
     opacity: initial;
   }
 }
-.ativoModal {
+:global(.ativo) {
   display: flex;
 }

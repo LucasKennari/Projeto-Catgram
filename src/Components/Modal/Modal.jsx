@@ -1,23 +1,29 @@
 import React from 'react'
 import styles from "./modal.module.css"
-const Modal = ({ children }) => {
-          const { modalContainer } = styles
+const Modal = ({ children, lgnModal, setLgnModal }) => {
+
+
+
+
           function handleClick(event) {
-                    event.preventDefault()
-                    const mod = document.getElementsByClassName('_ativoModal_14483_95')
-                    mod[0].classList.remove('_ativoModal_14483_95')
+
+                    const mod = document.getElementById('lgnModal')
+                    mod.classList.remove('ativo')
+                    // console.log(mod.classList.remove('ativo'))
           }
 
-          return (
-                    <section className={`
-                    ${styles.modalContainer}   
+          return (<>
+                    <section id='lgnModal' className={`
+                    ${styles.modalContainer}  
                     ${styles.animeTop} 
-                    ${styles.ativoModal}`}>
+               
+                   `}>
                               < div className={styles.modal} >
                                         <button className={styles.fechar} onClick={handleClick}>X</button>
                                         {children}
                               </div >
                     </section >
+          </>
           )
 }
 
