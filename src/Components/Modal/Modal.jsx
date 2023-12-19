@@ -1,13 +1,16 @@
 import React from 'react'
 import styles from "./modal.module.css"
-const Modal = ({ children, lgnModal, setLgnModal }) => {
+import { userContext } from '../../useHooks/useContext'
+const mod = document.getElementById('lgnModal')
 
+const Modal = ({ children }) => {
 
+          const { data } = React.useContext(userContext)
 
 
           function handleClick(event) {
 
-                    const mod = document.getElementById('lgnModal')
+
                     mod.classList.remove('ativo')
                     // console.log(mod.classList.remove('ativo'))
           }

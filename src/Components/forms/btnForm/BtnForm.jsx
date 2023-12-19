@@ -1,12 +1,17 @@
 import React from 'react'
 import styles from './btnForm.module.css'
 import Loading from '../../loading/Loading'
+import { userContext } from '../../../useHooks/useContext'
+
+
 const BtnForm = ({ children, ...props }) => {
 
-          return (
-                    <button className={styles.btnLogin}>
+          const { loading } = React.useContext(userContext)
 
-                              <Loading />
+          return (
+                    <button className={styles.btnLogin} >
+
+                              {loading ? <Loading /> : children}
 
                     </button>
           )
