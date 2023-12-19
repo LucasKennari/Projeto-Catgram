@@ -5,7 +5,9 @@ import Modal from '../../Modal/Modal'
 import { userContext } from '../../../useHooks/useContext'
 
 const LoginForm = () => {
+
           const { login } = React.useContext(userContext)
+
           const navigate = useNavigate()
           if (login === true) {
                     <Navigate to='/' />
@@ -14,9 +16,12 @@ const LoginForm = () => {
                     return (
                               <section >
                                         <Modal>
+
                                                   <h1>Login</h1>
                                                   <LoginFormComponents />
+
                                         </Modal>
+
 
 
                               </section>
