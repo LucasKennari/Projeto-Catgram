@@ -1,5 +1,5 @@
 import React, { createContext } from 'react'
-import { TOKEN_POST, USER_GET } from '../apiSrc/api'
+import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from '../apiSrc/api'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -11,6 +11,35 @@ export const UserStorage = ({ children }) => {
           const [login, setLogin] = React.useState(null)
           const [loading, setLoading] = React.useState(false)
           const [error, setError] = React.useState(false)
+
+
+          React.useEffect(() => {
+                    async function autoLogin() {
+                              try {
+                                        setError(null)
+                                        setLoading(true)
+                                        const token = window.localStorage.getItem('token')
+                                        if (token) {
+                                                  const { url, options } = TOKEN_VALIDATE_POST(token)
+                                                  const response = await fetch(url, options);
+                                                  if (!response.ok) {
+                                                            throw new Error('Token inválido')
+                                                  }
+                                                  await getUser(token)
+
+
+                                        }
+
+                              } catch (error) {
+                                        return null
+                              } finally {
+                                        setLoading(false)
+                              }
+
+                    }
+                    autoLogin()
+          }, [])
+
 
           async function getUser(token) {
                     setLoading(true)
