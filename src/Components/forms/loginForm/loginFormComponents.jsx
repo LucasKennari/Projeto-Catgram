@@ -13,8 +13,8 @@ import { userContext } from '../../../useHooks/useContext'
 
 
 const LoginFormComponents = () => {
-          const { userLogin, data } = React.useContext(userContext)
-
+          const { userLogin, data, error, loading } = React.useContext(userContext)
+          const [disabled, setDisabled] = React.useState(!true)
           //   const { loading, error, request } = useFetch()
           const username = useForm()
           const password = useForm()
@@ -24,7 +24,7 @@ const LoginFormComponents = () => {
                     if (username.validate() && password.validate()) {
 
                               userLogin(username.value, password.value)
-
+                              loading ? setDisabled(true) : setDisabled(false)
                     }
 
 
@@ -48,9 +48,13 @@ const LoginFormComponents = () => {
                                         <InputForm
                                                   label="Password" type="password" name="password" {...password} />
 
-                                        <BtnForm>LOGIN</BtnForm>
+                                        {
+                                                  loading ? <BtnForm disabled={true}>LOGIN</BtnForm> :
+                                                            <BtnForm disabled={false}>LOGIN</BtnForm>
 
+                                        }
 
+                                        {error && <p style={{ color: "red" }}>{error}</p>}
                               </form>
 
 

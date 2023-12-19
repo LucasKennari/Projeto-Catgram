@@ -13,6 +13,61 @@ export const UserStorage = ({ children }) => {
           const [error, setError] = React.useState(false)
 
 
+          const userLogout = React.useCallback(async function () {
+                    setData(null)
+                    setError(null)
+                    setLoading(false)
+                    setLogin(false)
+                    window.localStorage.removeItem('token')
+                    navigate('/')
+          }, [navigate])
+
+
+
+
+          async function getUser(token) {
+                    setLoading(true)
+                    const { url, options } = USER_GET(token)
+
+                    const response = await fetch(url, options)
+                    const json = await response.json()
+
+                    setData(json)
+                    setLogin(true)
+                    setLoading(false)
+          }
+
+          async function userLogin(username, password) {
+                    try {
+                              setError(true)
+                              setLoading(true)
+                              const { url, options } = TOKEN_POST({ username, password })
+                              const tokenRes = await fetch(url, options);
+
+                              if (!tokenRes.ok) {
+
+                                        throw new Error(`Error:  Usuário inválido`)
+                              }
+
+                              const json = await tokenRes.json()
+
+                              window.localStorage.setItem('token', json.token)
+                              await getUser(json.token)
+
+                              navigate('/')
+
+                    } catch (error) {
+                              setError(error.message)
+                              setLogin(false)
+                    } finally {
+                              setLoading(false)
+                    }
+
+
+
+
+          }
+
           React.useEffect(() => {
                     async function autoLogin() {
                               try {
@@ -31,42 +86,17 @@ export const UserStorage = ({ children }) => {
                                         }
 
                               } catch (error) {
-                                        return null
+                                        userLogout()
                               } finally {
                                         setLoading(false)
                               }
 
                     }
                     autoLogin()
-          }, [])
-
-
-          async function getUser(token) {
-                    setLoading(true)
-                    const { url, options } = USER_GET(token)
-
-                    const response = await fetch(url, options)
-                    const json = await response.json()
-
-                    setData(json)
-                    setLogin(true)
-                    setLoading(false)
-          }
-
-          async function userLogin(username, password) {
-                    setLoading(true)
-                    const { url, options } = TOKEN_POST({ username, password })
-                    const tokenRes = await fetch(url, options);
-                    const json = await tokenRes.json()
-
-                    window.localStorage.setItem('token', json.token)
-                    getUser(json.token)
-                    setLoading(false)
-                    navigate('/')
-          }
+          }, [userLogout])
 
           return (
-                    < userContext.Provider value={{ userLogin, data, loading }}>
+                    < userContext.Provider value={{ userLogin, data, loading, login, error, userLogout }}>
                               {children}
                     </userContext.Provider>
           )

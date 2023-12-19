@@ -4,19 +4,20 @@ import "../../App.css"
 import { NavLink } from 'react-router-dom'
 import Cat from "../../../IMG/icons/cat-icon.svg?react"
 import { userContext } from '../../useHooks/useContext'
+import AccOptions from '../AccOptions/AccOptions'
 
 const Header = () => {
 
-          const { data } = React.useContext(userContext)
+          const { data, userLogout } = React.useContext(userContext)
 
           function handleClick() {
-
-
                     const mod = document.getElementById('lgnModal')
 
                     mod.classList.add('ativo')
 
           }
+
+
 
           return (
                     <header className={styles.header} >
@@ -30,6 +31,8 @@ const Header = () => {
                                         {data ? <NavLink to="/account"
                                                   className={styles.login} >
                                                   {data.nome}
+                                                  {/* <AccOptions /> */}
+
                                         </NavLink> :
 
                                                   <NavLink id='lgn' to="/login"
@@ -40,6 +43,7 @@ const Header = () => {
                                                             Login / Registrar-se
                                                   </NavLink>
                                         }
+
                               </nav>
                     </header>
           )

@@ -1,19 +1,26 @@
 import React from 'react'
-import { Link, } from 'react-router-dom'
+import { Navigate, useNavigate, } from 'react-router-dom'
 import LoginFormComponents from '../../forms/loginForm/loginFormComponents'
 import Modal from '../../Modal/Modal'
+import { userContext } from '../../../useHooks/useContext'
 
 const LoginForm = () => {
-          return (
-                    <section >
-                              <h1>Login</h1>
-                              <Modal>
-                                        <LoginFormComponents />
-                              </Modal>
+          const { login } = React.useContext(userContext)
+          const navigate = useNavigate()
+          if (login === true) {
+                    <Navigate to='/' />
+          }
+          else
+                    return (
+                              <section >
+                                        <Modal>
+                                                  <h1>Login</h1>
+                                                  <LoginFormComponents />
+                                        </Modal>
 
 
-                    </section>
-          )
+                              </section>
+                    )
 }
 
 export default LoginForm

@@ -51,9 +51,9 @@
 }
 
 .animeTop {
-  transform: translateY(-20px);
+  transform: translateZ(20px);
   opacity: 0;
-  animation: animeTop 0.4s forwards;
+  animation: animeTop 0.5s forwards;
 }
 
 @keyframes animeTop {

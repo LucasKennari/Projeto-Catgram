@@ -29,6 +29,9 @@
 .btnLogin:disabled {
   opacity: 0.5;
   cursor: wait;
+  box-shadow: rgba(255, 255, 255, 0.196) 0px 0px 15px 0px;
+  border: 1px solid rgba(255, 254, 254, 0.777);
+  background-color: rgb(123, 123, 123);
 }
 .lblInput {
   margin: 5px;
