@@ -46,7 +46,7 @@ export const UserStorage = ({ children }) => {
 
                               if (!tokenRes.ok) {
 
-                                        throw new Error(`Error:  Usuário inválido`)
+                                        throw new Error(`Error:  Email e/ou senha inválidos`)
                               }
 
                               const json = await tokenRes.json()

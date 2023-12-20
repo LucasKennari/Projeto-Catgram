@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Header.module.css'
 import "../../App.css"
 import { NavLink } from 'react-router-dom'
-import Cat from "../../../IMG/icons/cat-icon.svg?react"
+import Cat from "../../../IMG/icons/logo-icon.svg?react"
 import { userContext } from '../../useHooks/useContext'
 import AccOptions from '../AccOptions/AccOptions'
 

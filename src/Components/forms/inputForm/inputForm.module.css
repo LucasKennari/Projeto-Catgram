@@ -1,5 +1,4 @@
 .wrapper {
-  margin-bottom: 1rem;
 }
 
 .inputComp {
@@ -10,22 +9,22 @@
   border-radius: 7px;
 
   font-family: monospace;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1.2rem;
 
   padding: 0.5rem;
   box-sizing: border-box;
   text-align: center;
 
-  border: 1px solid #5e6fa3;
-  background: #0e11202d;
+  border: 1px solid #6f43c0;
+  background: #342c418e;
   color: aliceblue;
 
   transition: 0.2s;
 }
 .inputComp::placeholder {
   font-family: monospace;
-  color: #676767cc;
+  color: aliceblue;
 }
 .inputComp:focus,
 .inputComp:hover {

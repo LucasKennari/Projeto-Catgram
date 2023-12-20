@@ -1,0 +1,11 @@
+.liPhotos {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 77%;
+  margin-bottom: 2rem;
+}
+.liPhotos:hover {
+  border: 1px solid #6a4ea6;
+  box-shadow: #6a4ea6 0px 0px 5px 0px;
+}

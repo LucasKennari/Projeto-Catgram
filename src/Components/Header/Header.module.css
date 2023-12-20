@@ -14,7 +14,8 @@
   top: 0px;
 }
 .header:hover {
-  box-shadow: 0px 8px 20px -10px #6f43c0ae;
+  border-bottom: 2px solid aliceblue;
+  box-shadow: 0px 8px 2b px -10px aliceblue;
 }
 .nav {
   display: flex;

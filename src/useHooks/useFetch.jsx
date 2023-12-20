@@ -2,7 +2,7 @@ import React from 'react'
 
 const useFetch = () => {
 
-          const [loading, setLoading] = React.useState(true)
+          const [loading, setLoading] = React.useState(false)
           const [data, setData] = React.useState(null)
           const [error, setError] = React.useState(null)
 
@@ -11,22 +11,30 @@ const useFetch = () => {
                     let json;
 
                     try {
-                              //   setLoading(true)
+                              setError(null)
+                              setLoading(true)
                               response = await fetch(url, options)
-                              json = await response.json()
 
-                              return setData(json)
+                              json = await response.json()
+                              if (response.ok === false) {
+
+                                        throw new Error(json.message)
+
+                              }
+                              setData(json)
 
                     } catch (error) {
                               json = null
-                              setData(null)
-                              return setError(error)
+
+                              setError(error.message)
                     } finally {
-                              //return loading(false)
+                              setData(json)
+                              setLoading(false)
+                              return { response, json }
                     }
 
 
-          }, [loading])
+          }, [])
 
 
           return { loading, data, error, request }

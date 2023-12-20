@@ -12,6 +12,7 @@ body {
   --type-three: "Afacad", sans-serif;
   --background-color-first: #191d3a;
   font-family: var(--type-first);
+  background: url("../IMG/background/background1.png");
   background-color: #1f2326;
 }
 
@@ -48,6 +49,10 @@ input {
   padding: 0 1rem;
   margin: 0 auto;
 }
+.mainContainer {
+  margin-top: 3rem;
+}
+
 a {
   font-family: var(--type-three);
   font-weight: bold;

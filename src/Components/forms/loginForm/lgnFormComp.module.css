@@ -4,14 +4,14 @@
   box-sizing: border-box;
   border-radius: 15px;
 }
-.iconLogin {
+/* .iconLogin {
   width: 80px;
   padding-bottom: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-}
+} */
 
 .formLink {
   justify-content: center;
@@ -37,7 +37,10 @@
   position: relative;
   top: 1px;
   padding-left: 4px;
+  text-decoration: underline;
+
   font-weight: normal;
+  /* border-bottom: 1px solid #b0bbc4; */
   color: aliceblue;
 }
 
