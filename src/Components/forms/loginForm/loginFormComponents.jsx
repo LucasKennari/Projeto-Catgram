@@ -76,7 +76,7 @@ const LoginFormComponents = () => {
                                         <Link className={styles.resetPass} to='/reset/password'>Esqueci minha senha</Link>
                                         <div className={styles.registerdiv}>
                                                   <h4 className={styles.subtitle}>Não possui conta?</h4>
-                                                  <Link className={styles.register} to='/register'>Registrar-se</Link>
+                                                  <Link className={styles.register} to='register'>Registrar-se</Link>
 
                                         </div>
 

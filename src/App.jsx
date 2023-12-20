@@ -19,7 +19,7 @@ const App = () => {
                                         <UserStorage>
                                                   <Header />
                                                   <Routes>
-                                                            <Route path='/'
+                                                            <Route path='/' end
                                                                       element={<Home />} />
 
                                                   </Routes>

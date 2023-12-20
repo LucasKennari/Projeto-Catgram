@@ -6,6 +6,12 @@ import { userContext } from '../../../useHooks/useContext'
 
 const LoginForm = () => {
 
+          React.useEffect(() => {
+                    const mod = document.getElementById('lgnModal')
+                    mod.classList.add('ativo')
+
+          }, [])
+
           const { login } = React.useContext(userContext)
 
           const navigate = useNavigate()

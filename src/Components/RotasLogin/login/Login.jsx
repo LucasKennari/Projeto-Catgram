@@ -13,12 +13,11 @@ const Login = () => {
           return (
                     <section className={styles.login}>
                               <div >
-
                                         <Routes>
                                                   <Route path='/' element={<LoginForm />} />
-                                                  <Route path='/registrar' element={<LoginCreate />} />
-                                                  <Route path='/pardeu' element={<LoginPasswordLost />} />
-                                                  <Route path='/resetar' element={<LoginResetPassword />} />
+                                                  <Route path='register' end element={<LoginCreate />} />
+                                                  <Route path='pardeu' element={<LoginPasswordLost />} />
+                                                  <Route path='resetar' element={<LoginResetPassword />} />
                                         </Routes>
 
                               </div>

@@ -3,7 +3,7 @@ import styles from "./modal.module.css"
 import { useNavigate } from 'react-router-dom'
 
 
-const Modal = ({ children }) => {
+const Modal = ({ children, }) => {
 
           const navigate = useNavigate()
           function handleClick() {
