@@ -11,15 +11,15 @@
 
   font-family: monospace;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
 
   padding: 0.5rem;
   box-sizing: border-box;
   text-align: center;
 
   border: 1px solid #5e6fa3;
-  background: #5e6fa325;
-  color: bisque;
+  background: #0e11202d;
+  color: aliceblue;
 
   transition: 0.2s;
 }
@@ -29,6 +29,7 @@
 }
 .inputComp:focus,
 .inputComp:hover {
+  color: aliceblue;
   outline: none;
   border-color: #5e6fa3;
   border-style: none;

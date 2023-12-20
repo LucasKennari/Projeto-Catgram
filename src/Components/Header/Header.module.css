@@ -3,14 +3,19 @@
   justify-content: center;
 }
 .header {
-  box-shadow: #2e2e2e2a 0px 1px 6px;
+  margin-top: 1rem;
+
+  box-shadow: #101010cc 0px 1px 6px;
+  border-radius: 10px;
   position: fixed;
   width: 50%;
   z-index: 100;
-  background: #cececed4;
+  background: #6f43c0;
   top: 0px;
 }
-
+.header:hover {
+  box-shadow: 0px 8px 20px -10px #6f43c0ae;
+}
 .nav {
   display: flex;
   justify-content: space-between;
@@ -23,7 +28,7 @@
 .login {
   display: flex;
   align-items: center;
-  color: #242424fd;
+  color: #f5f5f5fd;
 }
 .login::after {
   content: "";

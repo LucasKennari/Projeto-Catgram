@@ -13,8 +13,8 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 
   border: 1px solid #5e6fa3;
-  background-color: #383838;
-  color: #dbdbdbfd;
+  background-color: #6a4ea6;
+  color: aliceblue;
   transition: 0.5s;
 }
 .btnLogin:hover,
