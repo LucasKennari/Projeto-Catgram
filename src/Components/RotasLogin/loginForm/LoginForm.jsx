@@ -3,6 +3,7 @@ import { Navigate, useNavigate, } from 'react-router-dom'
 import LoginFormComponents from '../../forms/loginForm/loginFormComponents'
 import Modal from '../../Modal/Modal'
 import { userContext } from '../../../useHooks/useContext'
+import styles from './loginform.module.css'
 
 const LoginForm = () => {
 
@@ -23,7 +24,7 @@ const LoginForm = () => {
                               <section >
                                         <Modal>
 
-                                                  <h1>Login</h1>
+                                                  <h1 className={styles.title}>Catgram</h1>
                                                   <LoginFormComponents />
 
                                         </Modal>

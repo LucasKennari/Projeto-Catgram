@@ -39,10 +39,10 @@ const LoginFormComponents = () => {
 
           return (
                     <>
-                              <div className={styles.iconLogin} >
+                              {/* <div className={styles.iconLogin} >
                                         <img src="IMG\icons\lucas-03.png" alt="CAT-ICON" />
 
-                              </div>
+                              </div> */}
                               <form onSubmit={handleSubmit} className={styles.lgnFormComp}>
 
 

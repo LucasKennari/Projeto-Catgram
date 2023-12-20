@@ -20,32 +20,35 @@ const Header = () => {
 
 
           return (
-                    <header className={styles.header} >
-                              <nav className={`${styles.nav} container`}>
-                                        <NavLink to="/" end
-                                                  aria-label='Catgram - Home'
-                                                  className={styles.logo}>
-                                                  <Cat />
-                                        </NavLink>
+                    <div className={styles.divHeader}>
 
-                                        {data ? <NavLink to="/account"
-                                                  className={styles.login} >
-                                                  {data.nome}
-                                                  {/* <AccOptions /> */}
-
-                                        </NavLink> :
-
-                                                  <NavLink id='lgn' to="/login"
-                                                            className={styles.login}
-                                                            onClick={handleClick}
-
-                                                  >
-                                                            Login / Registrar-se
+                              <header className={styles.header} >
+                                        <nav className={`${styles.nav} container`}>
+                                                  <NavLink to="/" end
+                                                            aria-label='Catgram - Home'
+                                                            className={styles.logo}>
+                                                            <Cat />
                                                   </NavLink>
-                                        }
 
-                              </nav>
-                    </header>
+                                                  {data ? <NavLink to="/account"
+                                                            className={styles.login} >
+                                                            {data.nome}
+                                                            {/* <AccOptions /> */}
+
+                                                  </NavLink> :
+
+                                                            <NavLink id='lgn' to="/login"
+                                                                      className={styles.login}
+                                                                      onClick={handleClick}
+
+                                                            >
+                                                                      Login / Registrar-se
+                                                            </NavLink>
+                                                  }
+
+                                        </nav>
+                              </header>
+                    </div>
           )
 }
 

@@ -21,8 +21,8 @@
 .btnLogin:focus {
   outline: none;
   border: 1px solid rgba(255, 254, 254, 0.777);
-  background-color: rgb(123, 123, 123);
-  color: rgb(48, 48, 48);
+  background-color: rgb(184, 184, 184);
+  color: #1c1c1c;
   box-shadow: rgba(255, 255, 255, 0.196) 0px 0px 15px 0px;
 }
 
