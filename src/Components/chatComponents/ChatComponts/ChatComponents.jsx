@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './chatComp.module.css'
 const ChatComponents = () => {
           return (
-                    <div className={styles.divChat}>
+                    <div className={`${styles.divChat} ' container'`}>
 
                               <div className={styles.chat}>
                                         <div className={styles.divTitle}>

@@ -1,11 +1,10 @@
 import React from 'react'
 import styles from "./AccOptions.module.css"
-const AccOptions = () => {
-
+const AccOptions = ({ ...props }) => {
           return (
-                    <div className={styles.AccOptions}>
-
-                    </div>
+                    <button className={styles.AccOptions} onClick={props.onClick}>
+                              Logout
+                    </button>
           )
 }
 

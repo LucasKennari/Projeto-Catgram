@@ -17,7 +17,10 @@ const Header = () => {
 
           }
 
-
+          function handleLogout(event) {
+                    event.preventDefault()
+                    userLogout()
+          }
 
           return (
                     <div className={styles.divHeader}>
@@ -30,10 +33,10 @@ const Header = () => {
                                                             <Cat />
                                                   </NavLink>
 
-                                                  {data ? <NavLink to="/account"
+                                                  {data ? <NavLink to="perfil"
                                                             className={styles.login} >
                                                             {data.nome}
-                                                            {/* <AccOptions /> */}
+                                                            <AccOptions onClick={handleLogout}></AccOptions>
 
                                                   </NavLink> :
 
@@ -42,7 +45,7 @@ const Header = () => {
                                                                       onClick={handleClick}
 
                                                             >
-                                                                      Login / Registrar-se
+                                                                      Login / Cadastrar-se
                                                             </NavLink>
                                                   }
 

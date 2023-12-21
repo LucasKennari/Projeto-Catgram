@@ -54,7 +54,7 @@ export const UserStorage = ({ children }) => {
                               window.localStorage.setItem('token', json.token)
                               await getUser(json.token)
 
-                              navigate('/')
+                              navigate('/conta')
 
                     } catch (error) {
                               setError(error.message)
@@ -70,26 +70,29 @@ export const UserStorage = ({ children }) => {
 
           React.useEffect(() => {
                     async function autoLogin() {
-                              try {
-                                        setError(null)
-                                        setLoading(true)
-                                        const token = window.localStorage.getItem('token')
-                                        if (token) {
+                              const token = window.localStorage.getItem('token')
+                              if (token) {
+                                        try {
+                                                  setError(null)
+                                                  setLoading(true)
                                                   const { url, options } = TOKEN_VALIDATE_POST(token)
                                                   const response = await fetch(url, options);
+
                                                   if (!response.ok) {
                                                             throw new Error('Token inválido')
                                                   }
                                                   await getUser(token)
 
-
+                                        } catch (error) {
+                                                  userLogout()
+                                        } finally {
+                                                  setLoading(false)
                                         }
 
-                              } catch (error) {
-                                        userLogout()
-                              } finally {
-                                        setLoading(false)
+                              } else {
+                                        setLogin(false)
                               }
+
 
                     }
                     autoLogin()
