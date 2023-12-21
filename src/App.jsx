@@ -8,6 +8,7 @@ import Footer from './Components/Footer/Footer'
 import Home from './Page/Home'
 import Login from './Components/RotasLogin/login/Login'
 import { UserStorage } from './useHooks/useContext'
+import ChatComponents from './Components/chatComponents/ChatComponts/ChatComponents'
 
 const App = () => {
           // return (
@@ -28,6 +29,7 @@ const App = () => {
                                                                       element={<Login />} />
 
                                                   </Routes>
+                                                  <ChatComponents />
                                                   <Footer />
 
                                         </UserStorage>

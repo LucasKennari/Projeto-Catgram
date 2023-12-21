@@ -2,10 +2,15 @@
   display: flex;
   justify-items: center;
   align-items: center;
-  width: 77%;
+  width: 500px;
   margin-bottom: 2rem;
 }
 .liPhotos:hover {
   border: 1px solid #6a4ea6;
   box-shadow: #6a4ea6 0px 0px 5px 0px;
+  border-radius: 20px;
+}
+.liImg {
+  border-radius: 20px;
+  width: 500px;
 }

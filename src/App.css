@@ -1,15 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Afacad&family=Playfair+Display+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
 
 * {
   box-sizing: border-box;
 }
 body {
-  padding-top: 4rem;
+  padding-top: 3rem;
   margin: 0px;
   color: #333;
+
   --type-first: Helvetica, Arial, sans-serif;
   --type-seecond: "Spectral", Georgia;
   --type-three: "Afacad", sans-serif;
+  --type-font-input: "Inconsolata", monospace;
+
   --background-color-first: #191d3a;
   font-family: var(--type-first);
   background: url("../IMG/background/background1.png");

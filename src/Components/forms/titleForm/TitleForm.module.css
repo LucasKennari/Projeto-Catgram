@@ -3,8 +3,7 @@
   display: flex;
   justify-content: center;
   color: aliceblue;
-  font-family: "Afacad", sans-serif;
-  font-family: "Playfair Display SC", serif;
+  font-family: var(--type-seecond);
   font-size: 2rem;
   padding-bottom: 0.5rem;
 }

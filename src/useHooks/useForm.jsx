@@ -17,7 +17,7 @@ const useForm = (type) => {
                               return true
                     }
                     if (value.length === 0) {
-                              setError('Preencha um valor')
+                              setError(' Campo obrigatório')
                               return false
                     } else if (types[type] && !types[type].regex.test(value)) {
                               setError(types[type].message)

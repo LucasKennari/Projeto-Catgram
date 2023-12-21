@@ -1,0 +1,71 @@
+.divChat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 50px;
+  width: 300px;
+  position: fixed;
+  z-index: 100;
+  left: 67%;
+  margin-left: 5rem;
+  margin-right: 7rem;
+  background-color: blueviolet;
+  bottom: 0px;
+  box-shadow: #101010cc 0px 1px 6px;
+  border-radius: 10px 10px 0px 0px;
+}
+.chat {
+  border-bottom: 2px solid #424242;
+
+  margin-right: 2rem;
+  padding-left: 0.3rem;
+
+  /* width: 50%; */
+}
+.divTitle {
+  justify-content: space-between;
+  display: flex;
+}
+.title {
+  margin: 0px;
+  padding: 0px;
+}
+
+.btnX {
+  display: flex;
+  padding-top: 5px;
+
+  cursor: pointer;
+}
+
+/* .divText {
+  display: flex;
+  box-sizing: border-box;
+  height: 60px;
+  width: 100%;
+}
+
+.chatText {
+  border-radius: 2px;
+  padding: 10px;
+  border-style: none;
+  border-color: none;
+  display: flex;
+}
+.chatText:focus,
+.chatText:hover {
+  border-style: none;
+  outline: none;
+}
+.btnMsg {
+  color: aliceblue;
+  font-weight: bold;
+  background: #ffffff1f;
+  border-style: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.divLiResponse {
+  height: 200px;
+  background: #6f43c0;
+} */

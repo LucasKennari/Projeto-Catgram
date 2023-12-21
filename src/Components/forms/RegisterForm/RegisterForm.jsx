@@ -60,14 +60,14 @@ const RegisterForm = () => {
                                         theme='dark' />}
                               <form onSubmit={handleSubmit}>
 
-                                        <TitleForm>Cadastro</TitleForm>
+                                        {/* <TitleForm>Cadastro</TitleForm> */}
 
-                                        <InputForm label="Usuário" name='username' type='text' requerid {...username} />
-                                        <InputForm label="E-mail" name='email' type='email' requerid {...email} />
-                                        <InputForm label="Senha" name='password' type='password' requerid {...password} />
+                                        <InputForm texto="Username" name='username' type='text' requerid {...username} />
+                                        <InputForm texto="Email" name='email' type='email' requerid {...email} />
+                                        <InputForm texto="Password" name='password' type='password' requerid {...password} />
 
                                         <div className={styles.btnForm}>
-                                                  <BtnForm > {loading ? <Loading /> : 'REGISTRAR-SE'}</BtnForm>
+                                                  <BtnForm > {loading ? <Loading /> : 'CADASTRAR-SE'}</BtnForm>
                                                   <div className={styles.btnLogin}>
                                                             <h4 className={styles.subtitle}>Possui conta?</h4>
                                                             <Link className={styles.lgnLink} to='/login' >LOGIN</Link>

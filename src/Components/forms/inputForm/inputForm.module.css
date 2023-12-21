@@ -8,7 +8,7 @@
   margin-top: 1rem;
   border-radius: 7px;
 
-  font-family: monospace;
+  font-family: var(--type-font-input);
   font-weight: normal;
   font-size: 1.2rem;
 
@@ -23,7 +23,7 @@
   transition: 0.2s;
 }
 .inputComp::placeholder {
-  font-family: monospace;
+  font-family: var(--type-font-input);
   color: aliceblue;
 }
 .inputComp:focus,
