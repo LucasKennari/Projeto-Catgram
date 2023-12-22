@@ -57,12 +57,12 @@ const LoginFormComponents = () => {
                               </form>
                               <div className={styles.formLink} >
 
-                                        <Link className={styles.resetPass} to='/reset/password'>Esqueci minha senha</Link>
+                                        <Link className={styles.resetPass} to='/resetar/senha'>Esqueci minha senha</Link>
 
                                         <div className={styles.registerdiv}>
                                                   <h4 className={styles.subtitle}>Não possui conta?</h4>
 
-                                                  <Link className={styles.register} to='register'>CADASTRAR-SE</Link>
+                                                  <Link className={styles.register} to='cadastro'>CADASTRAR-SE</Link>
 
                                         </div>
 

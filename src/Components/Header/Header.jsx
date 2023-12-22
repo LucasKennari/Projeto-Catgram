@@ -6,8 +6,12 @@ import Cat from "../../../IMG/icons/logo-icon.svg?react"
 import { userContext } from '../../useHooks/useContext'
 import AccOptions from '../AccOptions/AccOptions'
 
+import UserHeaderNav from '../userAccount/userHeaderNav/UserHeaderNav'
+import UserIcon from '../userAccount/UserIcon/UserIcon'
+
 const Header = () => {
 
+          const [menu, setMenu] = React.useState(false)
           const { data, userLogout } = React.useContext(userContext)
 
           function handleClick() {
@@ -32,15 +36,16 @@ const Header = () => {
                                                             className={styles.logo}>
                                                             <Cat />
                                                   </NavLink>
-
-                                                  {data ? <NavLink to="perfil"
+                                                  <input type="text" style={{ borderRadius: '5px', background: '#563591', border: 'none', width: '60%', height: '50%', outline: 'none', color: 'aliceblue', paddingLeft: '1rem', fontWeight: 'bold' }} />
+                                                  {data ? <NavLink to="conta" end
                                                             className={styles.login} >
-                                                            {data.nome}
-                                                            <AccOptions onClick={handleLogout}></AccOptions>
+                                                            <UserIcon />
+
+                                                            {/* <AccOptions onClick={handleLogout}></AccOptions> */}
 
                                                   </NavLink> :
 
-                                                            <NavLink id='lgn' to="/login"
+                                                            <NavLink id='lgn' to="/login" end
                                                                       className={styles.login}
                                                                       onClick={handleClick}
 

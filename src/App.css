@@ -70,3 +70,15 @@ a {
   justify-content: center;
   align-items: center;
 }
+.animeParaEsquerda {
+  transform: transition(-20px);
+  opacity: 0;
+  animation: animeParaEsquerda 0.5s forwards;
+}
+
+@keyframes animeParaEsquerda {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}

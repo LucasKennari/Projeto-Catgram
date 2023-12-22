@@ -33,7 +33,7 @@ const App = () => {
                                                   </Routes>
 
                                                   <Routes>
-                                                            <Route path='perfil/*'
+                                                            <Route path='conta/*'
                                                                       element={<ProtectedRoute>
                                                                                 <UserProfile />
                                                                       </ProtectedRoute>} />

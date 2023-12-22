@@ -41,7 +41,7 @@ const RegisterForm = () => {
 
                               userLogin(username.value, email.value, password.value,)
                     }
-                    // const json = await response.json()
+
           }
 
           return (
