@@ -36,14 +36,16 @@ const Header = () => {
                                                             className={styles.logo}>
                                                             <Cat />
                                                   </NavLink>
-                                                  <input type="text" style={{ borderRadius: '5px', background: '#563591', border: 'none', width: '60%', height: '50%', outline: 'none', color: 'aliceblue', paddingLeft: '1rem', fontWeight: 'bold' }} />
-                                                  {data ? <NavLink to="conta" end
-                                                            className={styles.login} >
-                                                            <UserIcon />
 
-                                                            {/* <AccOptions onClick={handleLogout}></AccOptions> */}
+                                                  {data ?
+                                                            <NavLink to="conta" end
+                                                                      className={styles.login} >
 
-                                                  </NavLink> :
+                                                                      <UserIcon />
+
+                                                                      {/* <AccOptions onClick={handleLogout}></AccOptions> */}
+
+                                                            </NavLink> :
 
                                                             <NavLink id='lgn' to="/login" end
                                                                       className={styles.login}
