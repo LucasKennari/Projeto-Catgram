@@ -8,7 +8,7 @@ import FeedPhotos from './FeedPhotos/FeedPhotos'
 const Feed = () => {
           return (
                     <div className={styles.feed}>
-                              FEED
+
                               <FeedModal />
                               <FeedPhotos />
                     </div>

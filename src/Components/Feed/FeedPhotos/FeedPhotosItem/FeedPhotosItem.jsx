@@ -2,9 +2,9 @@ import React from 'react'
 import styles from './FeedPhotosItem.module.css'
 const FeedPhotosItem = ({ photo }) => {
           return (
-                    <li className={styles.liPhotos}>
-                              <img src={photo.src} alt={photo.title} className={styles.liImg} />
-                              <span>{photo.acesso}</span>
+                    <li className={styles.photo}>
+                              <img src={photo.src} alt={photo.title} className={styles.img} />
+                              <span className={styles.view}>{photo.acessos}</span>
                     </li>
           )
 }
