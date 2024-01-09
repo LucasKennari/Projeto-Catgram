@@ -4,7 +4,7 @@ import styles from './feedPhotos.module.css'
 import useFetch from '../../../useHooks/useFetch'
 import { PHOTOS_GET } from '../../../apiSrc/api'
 import Loading from '../../loading/Loading'
-const FeedPhotos = () => {
+const FeedPhotos = ({ setModalPhoto }) => {
 
           const { data, loading, error, request } = useFetch()
 
@@ -25,7 +25,7 @@ const FeedPhotos = () => {
                               <ul className={`${styles.ulPhotos} animeParaEsquerda`}>
                                         {data.map((photo) => {
                                                   return (
-                                                            <FeedPhotosItem photo={photo} key={photo.id} />
+                                                            <FeedPhotosItem photo={photo} key={photo.id} setModalPhoto={setModalPhoto} />
 
                                                   )
                                         })}

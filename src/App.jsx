@@ -39,7 +39,7 @@ const App = () => {
                                                                       </ProtectedRoute>} />
                                                   </Routes>
 
-                                                  <ChatComponents />
+                                                  {/* <ChatComponents /> */}
                                                   <Footer />
 
                                         </UserStorage>
